@@ -51,8 +51,8 @@ A multi-agent, self-optimizing trading system combining swarm intelligence, stra
   <img src="full_trading_system_flowchart.png" alt="Swarm Brain Flowchart" width="600"/>
 </p>
 
-## 📈 Result
-## 📈 Result
+
+## 📈 Sample_Result
 
 After each simulation run, the following HTML reports are generated:
 
@@ -64,6 +64,19 @@ After each simulation run, the following HTML reports are generated:
 | `AAPL_strategy_performance.html` | Compares all strategies over the run |
 
 > These files are stored in the results folder and viewable in any browser.
+>
+<p align="center">
+  <img src="AAPL_agent_performance.png" alt="Swarm Brain Flowchart" width="600"/>
+</p>
+<p align="center">
+  <img src="AAPL_candlestick.png" alt="Swarm Brain Flowchart" width="600"/>
+</p>
+<p align="center">
+  <img src="AAPL_decision_distribution.png" alt="Swarm Brain Flowchart" width="600"/>
+</p>
+<p align="center">
+  <img src="AAPL_strategy_performance.png" alt="Swarm Brain Flowchart" width="600"/>
+</p>
 
 A truly adaptive, self-improving market analyzer—where every trade trains the brain.
 
