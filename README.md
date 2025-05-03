@@ -52,34 +52,40 @@ A multi-agent, self-optimizing trading system combining swarm intelligence, stra
 </p>
 
 
-## 📈 Sample_Result
+## 📈 Result
 
-After each simulation run, the following HTML reports are generated:
+After each simulation run, the following HTML reports and visualizations are generated:
 
-| File | Description |
-|------|-------------|
+| Report | Description |
+|--------|-------------|
 | `AAPL_agent_performance.html` | Tracks agent fitness and profitability |
 | `AAPL_candlestick.html` | Shows the candlestick chart used during simulation |
 | `AAPL_decision_distribution.html` | Visualizes agent votes: BUY / SELL / HOLD |
 | `AAPL_strategy_performance.html` | Compares all strategies over the run |
 
-> These files are stored in the results folder and viewable in any browser.
->
+### 📊 Visual Outputs
+
 <p align="center">
-  <img src="AAPL_agent_performance.png" alt="Swarm Brain Flowchart" width="600"/>
+  <img src="results/AAPL_candlestick.png" width="600"/>
+  <br><i>Candlestick Chart</i>
 </p>
+
 <p align="center">
-  <img src="AAPL_candlestick.png" alt="Swarm Brain Flowchart" width="600"/>
+  <img src="results/AAPL_agent_performance.png" width="600"/>
+  <br><i>Agent Performance</i>
 </p>
+
 <p align="center">
-  <img src="AAPL_decision_distribution.png" alt="Swarm Brain Flowchart" width="600"/>
+  <img src="results/AAPL_strategy_performance.png" width="600"/>
+  <br><i>Strategy Performance</i>
 </p>
+
 <p align="center">
-  <img src="AAPL_strategy_performance.png" alt="Swarm Brain Flowchart" width="600"/>
+  <img src="results/AAPL_decision_distribution.png" width="600"/>
+  <br><i>Decision Distribution</i>
 </p>
 
 A truly adaptive, self-improving market analyzer—where every trade trains the brain.
 
----
 
 Want to contribute? Fork, test, and build a smarter swarm 🐜
