@@ -52,10 +52,18 @@ A multi-agent, self-optimizing trading system combining swarm intelligence, stra
 </p>
 
 ## 📈 Result
-<p align="center">
-  <img src="Ouput_ for_AAPL _STOCK.jpg" alt="Swarm Brain Flowchart" width="600"/>
-</p>
+## 📈 Result
 
+After each simulation run, the following HTML reports are generated:
+
+| File | Description |
+|------|-------------|
+| `AAPL_agent_performance.html` | Tracks agent fitness and profitability |
+| `AAPL_candlestick.html` | Shows the candlestick chart used during simulation |
+| `AAPL_decision_distribution.html` | Visualizes agent votes: BUY / SELL / HOLD |
+| `AAPL_strategy_performance.html` | Compares all strategies over the run |
+
+> These files are stored in the results folder and viewable in any browser.
 
 A truly adaptive, self-improving market analyzer—where every trade trains the brain.
 
