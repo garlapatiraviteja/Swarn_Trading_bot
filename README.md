@@ -52,6 +52,10 @@ A multi-agent, self-optimizing trading system combining swarm intelligence, stra
 </p>
 
 ## 📈 Result
+<p align="center">
+  <img src="Ouput_ for_AAPL _STOCK.jpg" alt="Swarm Brain Flowchart" width="600"/>
+</p>
+
 
 A truly adaptive, self-improving market analyzer—where every trade trains the brain.
 

@@ -14,9 +14,11 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 from datetime import datetime
+from config import DEEPSEEK_API_KEY, MODEL_PATH, FALLBACK_MODEL_PATH  # configure your own models and deepseek apis
+
 
 # --- CONFIG ---
-USE_LOCAL_LLM =True  # Set to True for local LLM , False for DeepSeek API
+USE_LOCAL_LLM = False  # Set to True for local LLM , False for DeepSeek API
 STOCKS = ["AAPL", "MSFT", "TSLA"]
 TRADING_DAYS = 180
 
@@ -31,8 +33,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # --- LLM Setup ---
 # Use a simpler approach to initialize the LLM
-MODEL_PATH = "C:/Users/garla/.lmstudio/models/microsoft/phi-3-mini-4k-instruct.Q4_K_M.gguf"
-FALLBACK_MODEL_PATH = "C:/Users/garla/.lmstudio/models/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/mistral-7b-instruct-v0.2.Q3_K_S.gguf"
+MODEL_PATH = MODEL_PATH
+FALLBACK_MODEL_PATH = FALLBACK_MODEL_PATH
 
 # Set this to False initially to avoid local LLM issues
 USE_LOCAL_LLM = False  
@@ -56,7 +58,7 @@ if USE_LOCAL_LLM:
                     model_path=MODEL_PATH,
                     n_ctx=1024,         # Reduced context window
                     n_threads=2,        # Reduced threads
-                    n_gpu_layers=24      # CPU only mode
+                    n_gpu_layers=0      # CPU only mode
                 )
                 
                 sys.stdout = original_stdout
@@ -75,7 +77,7 @@ if USE_LOCAL_LLM:
                     model_path=FALLBACK_MODEL_PATH,
                     n_ctx=1024,
                     n_threads=2,
-                    n_gpu_layers=24
+                    n_gpu_layers=0
                 )
                 
                 sys.stdout = original_stdout
@@ -97,7 +99,7 @@ if USE_LOCAL_LLM:
         print(f"Unexpected error initializing LLM: {e}")
         USE_LOCAL_LLM = False
 
-DEEPSEEK_API_KEY = "sk-103e93e823e44bae90ba1d779a33e931"
+DEEPSEEK_API_KEY = DEEPSEEK_API_KEY
 DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
 def predict_trend(market_summary, agent_memory=None):
